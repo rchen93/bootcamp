@@ -21,8 +21,8 @@ class UserIntegrationTests {
 
         def user = new User(
                 userId: 'joe',
-                password: 'secret',
-                homepage: 'http://www.grailsinaction.com')
+                password: 'secret')
+                //homepage: 'http://www.grailsinaction.com')
         assert user.save() != null
         assert user.id != null
 
@@ -35,8 +35,8 @@ class UserIntegrationTests {
 
         def user = new User(
                 userId: 'joe',
-                password: 'secret',
-                homepage: 'http://www.grailsinaction.com')
+                password: 'secret')
+                //homepage: 'http://www.grailsinaction.com')
         assert user.save() != null
 
         def foundUser = User.get(user.id)
@@ -52,8 +52,8 @@ class UserIntegrationTests {
 
         def user = new User(
                 userId: 'joe',
-                password: 'secret',
-                homepage: 'http://www.grailsinaction.com')
+                password: 'secret')
+               // homepage: 'http://www.grailsinaction.com')
         assert user.save() != null
 
         def foundUser = User.get(user.id)
@@ -66,8 +66,8 @@ class UserIntegrationTests {
     void testEvilSave() {
         def user = new User(
                 userId: 'chuck_norris',
-                password: 'tiny',
-                homepage: 'not-a-url')
+                password: 'tiny')
+                //homepage: 'not-a-url')
 
         if (user.validate())
             user.save()
@@ -80,21 +80,21 @@ class UserIntegrationTests {
         assert "size.toosmall" == errors.getFieldError("password").code
         assert "tiny" == errors.getFieldError("password").rejectedValue
 
-        assert errors.getFieldError("userId")       // Checks valid fields not in error
+        assert !errors.getFieldError("userId")       // Checks valid fields not in error
 
     }
 
     void testEvilSaveCorrected() {
        def user = new User(
                 userId: 'chuck_norris',
-                password: 'tiny',
-                homepage: 'not-a-url')
+                password: 'tiny')
+                //homepage: 'not-a-url')
         assert !user.validate()
         assert user.hasErrors()
         assert user.save() == null
 
         user.password = "fistfist"
-        user.homepage = "http://www.chucknorrisfacts.com"
+       // user.homepage = "http://www.chucknorrisfacts.com"
 
         assert user.validate()
         assert !user.hasErrors()

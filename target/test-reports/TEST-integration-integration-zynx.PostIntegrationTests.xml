@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="RKC-THINK" name="zynx.PostIntegrationTests" tests="2" time="0.69" timestamp="2014-07-27T23:23:00">
+  <properties />
+  <testcase classname="zynx.PostIntegrationTests" name="testFirstPost" time="0.628" />
+  <testcase classname="zynx.PostIntegrationTests" name="testAccessingPosts" time="0.037" />
+  <system-out><![CDATA[--Output from testFirstPost--
+--Output from testAccessingPosts--
+]]></system-out>
+  <system-err><![CDATA[--Output from testFirstPost--
+--Output from testAccessingPosts--
+]]></system-err>
+</testsuite>
