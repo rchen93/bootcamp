@@ -23,8 +23,8 @@ class UserIntegrationTests {
                 userId: 'joe',
                 password: 'secret',
                 homepage: 'http://www.grailsinaction.com')
-        assertNotNull user.save()
-        assertNotNull user.id
+        assert user.save() != null
+        assert user.id != null
 
         def foundUser = User.get(user.id)
         assert 'joe' == foundUser.userId
@@ -37,7 +37,7 @@ class UserIntegrationTests {
                 userId: 'joe',
                 password: 'secret',
                 homepage: 'http://www.grailsinaction.com')
-        assertNotNull user.save()
+        assert user.save() != null
 
         def foundUser = User.get(user.id)
         foundUser.password = 'sesame'
@@ -54,7 +54,7 @@ class UserIntegrationTests {
                 userId: 'joe',
                 password: 'secret',
                 homepage: 'http://www.grailsinaction.com')
-        assertNotNull user.save()
+        assert user.save() != null
 
         def foundUser = User.get(user.id)
         foundUser.delete()
@@ -64,39 +64,41 @@ class UserIntegrationTests {
     }
 
     void testEvilSave() {
-        def user = new User(userId: 'galen', password: 'tiny',
-            homepage: 'http://www.zynxhealth.com')
+        def user = new User(
+                userId: 'chuck_norris',
+                password: 'tiny',
+                homepage: 'not-a-url')
 
         if (user.validate())
             user.save()
         else 
             user.discard()
-        assertTrue user.hasErrors()
+        assert user.hasErrors()
 
         def errors = user.errors
 
-        assertEquals "size.toosmall", errors.getFieldError("password").code
-        assertEquals "tiny", errors.getFieldError("password").rejectedValue
+        assert "size.toosmall" == errors.getFieldError("password").code
+        assert "tiny" == errors.getFieldError("password").rejectedValue
 
-        user.password = 'galen'
-        assertFalse(user.validate())
-        assertTrue(user.hasErrors())
+        assert errors.getFieldError("userId")       // Checks valid fields not in error
 
-        assertNull errors.getFieldError("userId")
     }
 
     void testEvilSaveCorrected() {
-        def user = new User(userId: 'galen', password: 'tiny',
-            homepage: 'http://www.zynxhealth.com')
+       def user = new User(
+                userId: 'chuck_norris',
+                password: 'tiny',
+                homepage: 'not-a-url')
+        assert !user.validate()
+        assert user.hasErrors()
+        assert user.save() == null
 
-        assertFalse(user.validate())
-        assertTrue(user.hasErrors())
-        assertNull user.save()
+        user.password = "fistfist"
+        user.homepage = "http://www.chucknorrisfacts.com"
 
-        user.password = "password#1"
-        assertTrue(user.validate())
-        assertFalse(user.hasErrors())
-        assertNotNull user.save()
+        assert user.validate()
+        assert !user.hasErrors()
+        assert user.save() != null
     }
 
 
