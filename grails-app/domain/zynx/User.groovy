@@ -21,4 +21,7 @@ class User {
     static mapping = {
         posts sort: "dateCreated", order: "desc"
     }
+
+    String toString() { return "User $userId (id: $id)"}
+    String getDisplayString() { return userId }
 }
