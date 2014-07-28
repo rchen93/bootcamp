@@ -46,6 +46,15 @@ class UserController {
                 return [ user: user ]
             }
         }
+    } 
+
+     def profile(String id) {
+        def user = User.findByUserId(id)
+        if (user) {
+            return [profile: user.profile]
+        } else {
+            response.sendError(404)
+        }
     }
 }
 
