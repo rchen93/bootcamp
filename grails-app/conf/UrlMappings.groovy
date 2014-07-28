@@ -6,7 +6,7 @@ class UrlMappings {
 				// apply constraints here
 			}
 		}
-		/*
+
 		  "/timeline/chuck_norris" {
             controller = "post"
             action = "timeline"
@@ -22,7 +22,6 @@ class UrlMappings {
             controller = "post"
             action = "timeline"
         }
-        */
 
 		"/"(view:"/index")
 		"500"(view:'/error')

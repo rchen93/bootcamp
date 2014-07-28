@@ -39,6 +39,20 @@ class PostController {
         redirect(action: 'timeline', id: id)
     }
 
+    def addPostAjax(String content) {
+        try {
+            def newPost = postService.createPost(session.user.userId, content)
+            def recentPosts = Post.findAllByUser(
+                    session.user,
+                    [sort: 'dateCreated', order: 'desc', max: 20])
+            render template: 'postEntry', collection: recentPosts, var: 'post'
+        } catch (PostException pe) {
+            render {
+                div(class:"errors", pe.message)
+            }
+        }
+    }
+
     def global() {
         def posts = Post.list(params)
         def postCount = Post.count()
