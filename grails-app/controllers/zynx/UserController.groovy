@@ -3,6 +3,12 @@ package zynx
 class UserController {
     static scaffold = true
 
+    static navigation = [
+        [group:'tabs', action:'search', order: 90],
+        [action: 'advSearch', title: 'Advanced Search', order: 95],
+        [action: 'register', order: 99, isVisible: { true }]
+    ]
+
     def search() {}
 
     def results(String userId) {

@@ -5,6 +5,12 @@ class PostController {
 
     static defaultAction = "home"
 
+    static navigation = [
+        [group: 'tabs', action: 'timeline', title: 'My Timeline', order: 0],
+        [action: 'global', title: 'Global Timeline', order: 1],
+
+    ]
+
     def postService
 
     def home() {
