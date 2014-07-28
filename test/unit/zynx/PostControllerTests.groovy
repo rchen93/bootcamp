@@ -7,7 +7,7 @@ import org.junit.*
  * See the API for {@link grails.test.mixin.web.ControllerUnitTestMixin} for usage instructions
  */
 @TestFor(PostController)
-@Mock([User, Post])
+@Mock([User, Post, PostService])
 class PostControllerTests {
 
     void testTimelineGivenId() {
@@ -30,6 +30,18 @@ class PostControllerTests {
     }
 
     void testAddPostToTimeline() {
+        def mockPostService = mockFor(PostService)
+        mockPostService.demand.createPost(1..1) { String arg1, String arg2 -> 
+            new Post(content: "Mock Post")}
+        controller.postService = mockPostService.createMock()
+
+        def result = this.controller.addPost("joe_cool", "Posting up a storm")
+        assert flash.message ==~ /Added new post: Mock.*/
+        assert response.redirectedUrl == '/post/timeline/joe_cool'
+    }
+
+/*
+    void testAddPostToTimeline() {
     	User chuck = new User(
                 userId: "chuck_norris",
                 password: "password").save(failOnError: true)
@@ -44,7 +56,7 @@ class PostControllerTests {
         assert response.redirectedUrl == "/post/timeline/${chuck.userId}"
         assert Post.countByUser(chuck) == 1
     }
-
+*/
     void testInvalidNewPostToTimeline() {
     	User chuck = new User(userId: "chuck_norris", password: "password").save(failOnError: true)
 
@@ -75,4 +87,5 @@ class PostControllerTests {
         assert response.redirectedUrl == '/post/timeline/chuck_norris'
                                                                    
     }
+
 }

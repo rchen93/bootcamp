@@ -5,6 +5,8 @@ class PostController {
 
     static defaultAction = "home"
 
+    def postService
+
     def home() {
         if (!params.id) {
             params.id = "chuck_norris"
@@ -21,6 +23,16 @@ class PostController {
         }
     }
 
+    def addPost(String id, String content) {
+        try {
+            def newPost = postService.createPost(id, content)
+            flash.message = "Added new post: ${newPost.content}"
+        } catch (PostException pe) {
+            flash.message = pe.message
+        }
+        redirect(action: 'timeline', id: id)
+    }
+/*
     def addPost() {
         def user = User.findByUserId(params.id)
         if (user) {
@@ -36,4 +48,5 @@ class PostController {
         }
         redirect(action: 'timeline', id: params.id)
     }
+    */
 }

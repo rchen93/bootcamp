@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="RKC-THINK" name="zynx.PostControllerTests" tests="5" time="12.236" timestamp="2014-07-28T09:15:35">
+<testsuite errors="0" failures="0" hostname="RKC-THINK" name="zynx.PostControllerTests" tests="5" time="12.704" timestamp="2014-07-28T09:46:27">
   <properties />
-  <testcase classname="zynx.PostControllerTests" name="testHome" time="8.449" />
-  <testcase classname="zynx.PostControllerTests" name="testTimelineGivenId" time="2.536" />
-  <testcase classname="zynx.PostControllerTests" name="testErrorWhenNonExistentUser" time="0.252" />
-  <testcase classname="zynx.PostControllerTests" name="testAddPostToTimeline" time="0.594" />
-  <testcase classname="zynx.PostControllerTests" name="testInvalidNewPostToTimeline" time="0.292" />
+  <testcase classname="zynx.PostControllerTests" name="testHome" time="7.531" />
+  <testcase classname="zynx.PostControllerTests" name="testTimelineGivenId" time="3.571" />
+  <testcase classname="zynx.PostControllerTests" name="testErrorWhenNonExistentUser" time="0.365" />
+  <testcase classname="zynx.PostControllerTests" name="testAddPostToTimeline" time="0.758" />
+  <testcase classname="zynx.PostControllerTests" name="testInvalidNewPostToTimeline" time="0.341" />
   <system-out><![CDATA[--Output from testHome--
 --Output from testTimelineGivenId--
 --Output from testErrorWhenNonExistentUser--

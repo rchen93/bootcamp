@@ -1,5 +1,5 @@
 Testsuite: zynx.PostControllerTests
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 12.236 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 12.704 sec
 ------------- Standard Output ---------------
 --Output from testHome--
 --Output from testTimelineGivenId--
@@ -15,8 +15,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 12.236 sec
 --Output from testInvalidNewPostToTimeline--
 ------------- ---------------- ---------------
 
-Testcase: testHome took 8.45 sec
-Testcase: testTimelineGivenId took 2.536 sec
-Testcase: testErrorWhenNonExistentUser took 0.252 sec
-Testcase: testAddPostToTimeline took 0.594 sec
-Testcase: testInvalidNewPostToTimeline took 0.292 sec
+Testcase: testHome took 7.531 sec
+Testcase: testTimelineGivenId took 3.571 sec
+Testcase: testErrorWhenNonExistentUser took 0.365 sec
+Testcase: testAddPostToTimeline took 0.758 sec
+Testcase: testInvalidNewPostToTimeline took 0.341 sec
