@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="RKC-THINK" id="0" name="PostIntegrationTests" package="zynx" tests="3" time="0.761" timestamp="2014-07-28T04:37:30">
+  <testsuite errors="0" failures="0" hostname="RKC-THINK" id="0" name="QueryIntegrationTests" package="zynx" tests="5" time="1.564" timestamp="2014-07-28T08:25:28">
       <properties />
 
-      <testcase classname="zynx.PostIntegrationTests" name="testFirstPost" time="0.657" />
+      <testcase classname="zynx.QueryIntegrationTests" name="testPropertyComparison" time="0.932" />
 
-      <testcase classname="zynx.PostIntegrationTests" name="testAccessingPosts" time="0.035" />
+      <testcase classname="zynx.QueryIntegrationTests" name="testMultipleCriteria" time="0.125" />
 
-      <testcase classname="zynx.PostIntegrationTests" name="testPostWithTags" time="0.035" />
+      <testcase classname="zynx.QueryIntegrationTests" name="testQueryOfSingleInstance" time="0.064" />
 
-      <system-out><![CDATA[--Output from testFirstPost--
---Output from testAccessingPosts--
---Output from testPostWithTags--
+      <testcase classname="zynx.QueryIntegrationTests" name="testQueryAgainstRange" time="0.087" />
+
+      <testcase classname="zynx.QueryIntegrationTests" name="testQueryOnAssociation" time="0.306" />
+
+      <system-out><![CDATA[--Output from testPropertyComparison--
+--Output from testMultipleCriteria--
+--Output from testQueryOfSingleInstance--
+--Output from testQueryAgainstRange--
+--Output from testQueryOnAssociation--
 ]]></system-out>
 
-      <system-err><![CDATA[--Output from testFirstPost--
---Output from testAccessingPosts--
---Output from testPostWithTags--
+      <system-err><![CDATA[--Output from testPropertyComparison--
+--Output from testMultipleCriteria--
+--Output from testQueryOfSingleInstance--
+--Output from testQueryAgainstRange--
+--Output from testQueryOnAssociation--
 ]]></system-err>
 
   </testsuite>

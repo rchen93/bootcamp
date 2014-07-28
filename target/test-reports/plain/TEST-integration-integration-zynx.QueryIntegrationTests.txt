@@ -1,0 +1,22 @@
+Testsuite: zynx.QueryIntegrationTests
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 1.564 sec
+------------- Standard Output ---------------
+--Output from testPropertyComparison--
+--Output from testMultipleCriteria--
+--Output from testQueryOfSingleInstance--
+--Output from testQueryAgainstRange--
+--Output from testQueryOnAssociation--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testPropertyComparison--
+--Output from testMultipleCriteria--
+--Output from testQueryOfSingleInstance--
+--Output from testQueryAgainstRange--
+--Output from testQueryOnAssociation--
+------------- ---------------- ---------------
+
+Testcase: testPropertyComparison took 0.932 sec
+Testcase: testMultipleCriteria took 0.125 sec
+Testcase: testQueryOfSingleInstance took 0.064 sec
+Testcase: testQueryAgainstRange took 0.087 sec
+Testcase: testQueryOnAssociation took 0.306 sec
