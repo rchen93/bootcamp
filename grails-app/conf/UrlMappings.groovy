@@ -7,7 +7,7 @@ class UrlMappings {
 			}
 		}
 
-		  "/timeline/chuck_norris" {
+		"/timeline/chuck_norris" {
             controller = "post"
             action = "timeline"
             id = "chuck_norris"
