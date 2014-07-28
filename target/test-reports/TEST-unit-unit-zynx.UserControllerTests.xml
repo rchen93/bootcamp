@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="RKC-THINK" name="zynx.UserControllerTests" tests="1" time="14.272" timestamp="2014-07-28T09:58:05">
+  <properties />
+  <testcase classname="zynx.UserControllerTests" name="testRegisterGoodUser" time="14.135" />
+  <system-out><![CDATA[--Output from testRegisterGoodUser--
+]]></system-out>
+  <system-err><![CDATA[--Output from testRegisterGoodUser--
+]]></system-err>
+</testsuite>

@@ -1,0 +1,10 @@
+Testsuite: zynx.UserControllerTests
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 14.272 sec
+------------- Standard Output ---------------
+--Output from testRegisterGoodUser--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testRegisterGoodUser--
+------------- ---------------- ---------------
+
+Testcase: testRegisterGoodUser took 14.14 sec
