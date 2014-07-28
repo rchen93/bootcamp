@@ -34,7 +34,9 @@ class PostController {
     }
 
     def global() {
-        [ posts: Post.list(params), postCount: Post.count()]
+        def posts = Post.list(params)
+        def postCount = Post.count()
+        [ posts: posts, postCount: postCount]
     }
 /*
     def addPost() {
