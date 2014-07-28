@@ -32,6 +32,10 @@ class PostController {
         }
         redirect(action: 'timeline', id: id)
     }
+
+    def global() {
+        [ posts: Post.list(params), postCount: Post.count()]
+    }
 /*
     def addPost() {
         def user = User.findByUserId(params.id)

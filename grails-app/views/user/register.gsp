@@ -16,7 +16,7 @@
     <g:form action="register">
         <fieldset class="form">
             <div class="fieldcontain required">
-                <label for="userId">Login ID</label>
+                <label for="userId">User ID</label>
                 <g:textField name="userId" value="${user?.userId}"/>
             </div>
             <div class="fieldcontain required">
