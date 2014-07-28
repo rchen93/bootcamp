@@ -1,30 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="RKC-THINK" id="0" name="QueryIntegrationTests" package="zynx" tests="5" time="1.564" timestamp="2014-07-28T08:25:28">
+  <testsuite errors="0" failures="0" hostname="RKC-THINK" id="0" name="PostControllerTests" package="zynx" tests="2" time="11.312" timestamp="2014-07-28T08:54:37">
       <properties />
 
-      <testcase classname="zynx.QueryIntegrationTests" name="testPropertyComparison" time="0.932" />
+      <testcase classname="zynx.PostControllerTests" name="testTimelineGivenId" time="10.922" />
 
-      <testcase classname="zynx.QueryIntegrationTests" name="testMultipleCriteria" time="0.125" />
+      <testcase classname="zynx.PostControllerTests" name="testErrorWhenNonExistentUser" time="0.296" />
 
-      <testcase classname="zynx.QueryIntegrationTests" name="testQueryOfSingleInstance" time="0.064" />
-
-      <testcase classname="zynx.QueryIntegrationTests" name="testQueryAgainstRange" time="0.087" />
-
-      <testcase classname="zynx.QueryIntegrationTests" name="testQueryOnAssociation" time="0.306" />
-
-      <system-out><![CDATA[--Output from testPropertyComparison--
---Output from testMultipleCriteria--
---Output from testQueryOfSingleInstance--
---Output from testQueryAgainstRange--
---Output from testQueryOnAssociation--
+      <system-out><![CDATA[--Output from testTimelineGivenId--
+--Output from testErrorWhenNonExistentUser--
 ]]></system-out>
 
-      <system-err><![CDATA[--Output from testPropertyComparison--
---Output from testMultipleCriteria--
---Output from testQueryOfSingleInstance--
---Output from testQueryAgainstRange--
---Output from testQueryOnAssociation--
+      <system-err><![CDATA[--Output from testTimelineGivenId--
+--Output from testErrorWhenNonExistentUser--
 ]]></system-err>
 
   </testsuite>

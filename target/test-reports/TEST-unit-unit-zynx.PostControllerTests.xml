@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="RKC-THINK" name="zynx.PostControllerTests" tests="2" time="11.312" timestamp="2014-07-28T08:54:37">
+  <properties />
+  <testcase classname="zynx.PostControllerTests" name="testTimelineGivenId" time="10.922" />
+  <testcase classname="zynx.PostControllerTests" name="testErrorWhenNonExistentUser" time="0.296" />
+  <system-out><![CDATA[--Output from testTimelineGivenId--
+--Output from testErrorWhenNonExistentUser--
+]]></system-out>
+  <system-err><![CDATA[--Output from testTimelineGivenId--
+--Output from testErrorWhenNonExistentUser--
+]]></system-err>
+</testsuite>

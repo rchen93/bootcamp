@@ -1,0 +1,13 @@
+Testsuite: zynx.PostControllerTests
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 11.312 sec
+------------- Standard Output ---------------
+--Output from testTimelineGivenId--
+--Output from testErrorWhenNonExistentUser--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testTimelineGivenId--
+--Output from testErrorWhenNonExistentUser--
+------------- ---------------- ---------------
+
+Testcase: testTimelineGivenId took 10.923 sec
+Testcase: testErrorWhenNonExistentUser took 0.295 sec
