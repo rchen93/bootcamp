@@ -13,7 +13,7 @@
     <g:if test="${flash.message}">
         <div class="flash">${flash.message}</div>
     </g:if>
-    <g:uploadForm action="register2">
+    <g:uploadForm action="newregister">
         <fieldset class="form">
             <div class="fieldcontain required">
                 <label for="userId">User ID</label>
@@ -60,7 +60,7 @@
             <div class="fieldcontain required">
                 <label for="referrer">Who introduced you to Hubbub?</label>
                 <g:select name="referrer"
-                   from="${com.grailsinaction.Profile.list()}"
+                   from="${zynx.Profile.list()}"
                    optionKey="id"
                    optionValue="fullName"
                    noSelection="${['null':'Please Choose...']}" />

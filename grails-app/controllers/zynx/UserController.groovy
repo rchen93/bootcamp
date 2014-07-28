@@ -48,9 +48,9 @@ class UserController {
         }
     } 
 
-    def register2(UserRegistrationCommand urc) {
+    def newregister(UserRegistrationCommand urc) {
         if (urc.hasErrors()) {
-            render view: "register", model: [ user : urc ]
+            return [user:urc]
         } else {
             def user = new User(urc.properties)
             user.profile = new Profile(urc.properties)
@@ -92,7 +92,7 @@ class UserRegistrationCommand {
         importFrom User
         password(size: 6..8, blank: false,
                  validator: { passwd, urc ->
-                    return passwd != urc.loginId
+                    return passwd != urc.userId
                 })
         passwordRepeat(nullable: false,
                 validator: { passwd2, urc ->
