@@ -1,4 +1,3 @@
-
 body {
     background: #dddddd;
     font-family: "Helvetica";
@@ -115,6 +114,14 @@ dd {
     margin: 4px;
 }
 
+.flash {
+    background: #FFD;
+    border: 1px solid black;
+    color: black;
+    padding: 1em;
+    margin: 1em;
+}
+
 .errors {
     background: lightpink;
     border: 1px dotted red;
@@ -123,4 +130,3 @@ dd {
     margin: 1em;
     font-weight: bold;
 }
-

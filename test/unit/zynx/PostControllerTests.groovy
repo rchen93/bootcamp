@@ -28,4 +28,51 @@ class PostControllerTests {
     	this.controller.timeline()
     	assert response.status == 404
     }
+
+    void testAddPostToTimeline() {
+    	User chuck = new User(
+                userId: "chuck_norris",
+                password: "password").save(failOnError: true)
+
+        params.id = chuck.userId
+
+        params.content = "Chuck Norris can unit test entire applications with a single assert."
+
+        def model = this.controller.addPost()
+
+        assert flash.message == "Successfully created Post"
+        assert response.redirectedUrl == "/post/timeline/${chuck.userId}"
+        assert Post.countByUser(chuck) == 1
+    }
+
+    void testInvalidNewPostToTimeline() {
+    	User chuck = new User(userId: "chuck_norris", password: "password").save(failOnError: true)
+
+        params.id = chuck.userId
+
+        params.content = null
+
+        def model = this.controller.addPost()
+
+        assert flash.message == "Invalid or empty post"
+        assert response.redirectedUrl == "/post/timeline/${chuck.userId}"
+        assert Post.countByUser(chuck) == 0
+    }
+
+    void testHome() {
+        params.id = "joe_cool"
+                                                                   
+        this.controller.home()
+                                                                  
+        assert response.redirectedUrl == '/post/timeline/joe_cool'
+
+        response.reset()
+
+        params.id = null
+
+        this.controller.home()
+
+        assert response.redirectedUrl == '/post/timeline/chuck_norris'
+                                                                   
+    }
 }

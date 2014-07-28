@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="RKC-THINK" id="0" name="PostControllerTests" package="zynx" tests="2" time="11.312" timestamp="2014-07-28T08:54:37">
+  <testsuite errors="0" failures="0" hostname="RKC-THINK" id="0" name="PostControllerTests" package="zynx" tests="5" time="12.236" timestamp="2014-07-28T09:15:35">
       <properties />
 
-      <testcase classname="zynx.PostControllerTests" name="testTimelineGivenId" time="10.922" />
+      <testcase classname="zynx.PostControllerTests" name="testHome" time="8.449" />
 
-      <testcase classname="zynx.PostControllerTests" name="testErrorWhenNonExistentUser" time="0.296" />
+      <testcase classname="zynx.PostControllerTests" name="testTimelineGivenId" time="2.536" />
 
-      <system-out><![CDATA[--Output from testTimelineGivenId--
+      <testcase classname="zynx.PostControllerTests" name="testErrorWhenNonExistentUser" time="0.252" />
+
+      <testcase classname="zynx.PostControllerTests" name="testAddPostToTimeline" time="0.594" />
+
+      <testcase classname="zynx.PostControllerTests" name="testInvalidNewPostToTimeline" time="0.292" />
+
+      <system-out><![CDATA[--Output from testHome--
+--Output from testTimelineGivenId--
 --Output from testErrorWhenNonExistentUser--
+--Output from testAddPostToTimeline--
+--Output from testInvalidNewPostToTimeline--
 ]]></system-out>
 
-      <system-err><![CDATA[--Output from testTimelineGivenId--
+      <system-err><![CDATA[--Output from testHome--
+--Output from testTimelineGivenId--
 --Output from testErrorWhenNonExistentUser--
+--Output from testAddPostToTimeline--
+--Output from testInvalidNewPostToTimeline--
 ]]></system-err>
 
   </testsuite>

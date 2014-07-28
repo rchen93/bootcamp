@@ -1,2 +1,5 @@
+--Output from testHome--
 --Output from testTimelineGivenId--
 --Output from testErrorWhenNonExistentUser--
+--Output from testAddPostToTimeline--
+--Output from testInvalidNewPostToTimeline--
