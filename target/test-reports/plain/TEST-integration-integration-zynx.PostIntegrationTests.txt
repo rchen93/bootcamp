@@ -1,13 +1,16 @@
 Testsuite: zynx.PostIntegrationTests
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.69 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.761 sec
 ------------- Standard Output ---------------
 --Output from testFirstPost--
 --Output from testAccessingPosts--
+--Output from testPostWithTags--
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 --Output from testFirstPost--
 --Output from testAccessingPosts--
+--Output from testPostWithTags--
 ------------- ---------------- ---------------
 
-Testcase: testFirstPost took 0.628 sec
-Testcase: testAccessingPosts took 0.037 sec
+Testcase: testFirstPost took 0.657 sec
+Testcase: testAccessingPosts took 0.035 sec
+Testcase: testPostWithTags took 0.035 sec

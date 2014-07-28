@@ -16,5 +16,9 @@ class User {
         //homepage url: true, nullable: true
         profile nullable: true
     }
-    static hasMany = [ posts: Post ]
+    static hasMany = [ posts: Post, tags: Tag, following: User]
+
+    static mapping = {
+        posts sort: "dateCreated", order: "desc"
+    }
 }

@@ -101,5 +101,17 @@ class UserIntegrationTests {
         assert user.save() != null
     }
 
+    void testFollowing() {
+  
+        def glen = new User(userId: 'glen', password:'password').save()
+        def peter = new User(userId: 'peter', password:'password').save()
+        def sven = new User(userId: 'sven', password:'password').save()
 
+        glen.addToFollowing(peter)
+        glen.addToFollowing(sven)
+        assertEquals 2 == glen.following.size()
+
+        sven.addToFollowing(peter)
+        assertEquals 1 == sven.following.size()
+    }
 }
