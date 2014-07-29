@@ -7,15 +7,10 @@ class UrlMappings {
 			}
 		}
 
-		"/timeline/chuck_norris" {
+        "/timeline" {
             controller = "post"
             action = "timeline"
             id = "chuck_norris"
-        }
-
-        "/timeline" {
-            controller = "post"
-            action = "personal"
         }
 
         "/users/$id" {

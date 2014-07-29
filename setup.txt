@@ -1,0 +1,45 @@
+grails create-app bootcamp
+grails create-domain-class domo.User
+grails create-integration-test domo.UserIntegration
+grails create-domain-class domo.Profile
+grails create-domain-class domo.Post
+grails create-integration-test domo.PostIntegration
+grails create-domain-class domo.Tag
+
+grails create-scaffold-controller domo.User
+grails create-scaffold-controller domo.Profile
+grails create-scaffold-controller domo.Post
+grails create-scaffold-controller domo.Tag
+
+Added *.css files, headerlogo.png
+
+Added todomain.gsp
+
+grails install-templates
+
+Added BootStrap.groovy
+Added search.gsp
+
+grails create-integration-test domo.QueryIntegration
+
+Added advSearch.gsp
+Added advResults.gsp
+Added timeline.gsp
+
+grails create-service domo.Post
+
+Added register.gsp
+
+grails create-controller domo.Image
+
+Added /image/form.gsp
+Added /user/profile.gsp
+
+grails create-filters domo.LameSecurity
+grails create-controller domo.Login
+grails create-tag-lib domo.Date
+grails create-tag-lib domo.Util
+
+Added toDoTimeline.gsp
+Added /post/_postEntry.gsp
+Added /post/global.gsp
